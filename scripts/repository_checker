@@ -43,7 +43,10 @@ if [ -z "${REPREPRO_OPTS:-}" ]  ; then
   REPREPRO_OPTS='--waitforlock 1000 -v'
 fi
 
-REPREPRO_DIRS=`echo -e --basedir "${REPOSITORY}" --outdir "${REPOSITORY_OUT_DIR}" --distdir "${REPOSITORY_DIST_DIR}" --confdir "${REPOSITORY_CONF_DIR}" --logdir "${REPOSITORY_LOG_DIR}" --dbdir "${REPOSITORY_DB_DIR}" --listdir "${REPOSITORY_LIST_DIR}" --morguedir "${REPOSITORY_MORGUE_DIR}"`
+if [ -n "${RELEASE_REPOSITORY:-}" ] ; then
+  REPOSITORY="${RELEASE_REPOSITORY}"
+  echo "*** Release REPOSITORY is set, using [$RELEASE_REPOSITORY] ***"
+fi
 
 LOGFILE=$(mktemp)
 

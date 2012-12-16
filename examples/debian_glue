@@ -22,6 +22,11 @@
 # Defaults:
 # REPOSITORY='/srv/repository'
 
+
+# If you do not want to separate release reprepro repositories
+# SEPARATE_RELEASE=false
+# Default:
+# SEPARATE_RELEASE=true
 # You can define every reprepro directory separately.
 # $REPOSITORY is used as the base directory (+b)
 # Defaults:
