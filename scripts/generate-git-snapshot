@@ -216,6 +216,7 @@ else
   git-buildpackage ${GBP_OPTS}
 fi
 
+git checkout ${GIT_BRANCH} # switch back to previous "branch" before removing the tmp branch
 # build source package, run before switching back to previous branch
 # to get the actual requested version
 ( cd .. ; dpkg-source -I -b source )
