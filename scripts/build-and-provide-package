@@ -203,7 +203,7 @@ dist_and_arch_settings() {
   if [ -n "${COWBUILDER_HOOK_DIR:-}" ] ; then
     echo "*** COWBUILDER_HOOK_DIR is set to ${COWBUILDER_HOOK_DIR} ***"
   else
-    COWBUILDER_HOOK_DIR="/var/cache/pbuilder/hook.d/"
+    COWBUILDER_HOOK_DIR="/etc/pbuilder/hook.d/"
     echo "*** No COWBUILDER_HOOK_DIR set, using ${COWBUILDER_HOOK_DIR} ***"
   fi
 }
