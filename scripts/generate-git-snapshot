@@ -221,7 +221,6 @@ git checkout ${GIT_BRANCH} # switch back to previous "branch" before removing th
 # to get the actual requested version
 ( cd .. ; dpkg-source -I -b source )
 
-git checkout ${GIT_BRANCH} # switch back to previous "branch" before removing the tmp branch
 git branch -D "$random_branch"
 
 # revert to original debian/changelog to avoid merge conflicts
